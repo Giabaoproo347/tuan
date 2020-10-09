@@ -1,0 +1,74 @@
+<div style="font-family: Arial,sans-serif; font-size: 30px; color: black; text-transform: uppercase; margin-left: 35%; color: blue">
+  Lấy số điện thoại trang Rentcode
+</div>
+<button class="btn" style="margin-bottom: 20px" (click)="getCodeFromRentCode()">Lấy mã Rentcode</button>
+
+<table style="border: 1px solid grey" width="100%">
+  <tr>
+    <th>Mã số (Không cầng để ý mã này)</th>
+    <th>Số điện thoại</th>
+    <th>Tin nhắn SMS</th>
+    <th>Thời gian (s) 300s là hết hạn</th>
+  </tr>
+
+  <tr>
+    <td *ngIf="orderId; else orderIdElse" style="width: 300px; text-align: center; font-size: 20px">{{orderId}}</td>
+    <td *ngIf="phoneNumber; else phoneElse" style="width: 300px; text-align: center; font-size: 20px">{{phoneNumber}}</td>
+    <td *ngIf="message; else smsElse" style="width: 300px; text-align: center; font-size: 20px">{{message}}</td>
+    <td style="width: 300px; text-align: center; font-size: 20px">{{time}}</td>
+
+    <ng-template #orderIdElse>
+      <td style="width: 300px; text-align: center">
+        <img style="width: 200px" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
+      </td>
+    </ng-template>
+    <ng-template #phoneElse>
+      <td style="width: 300px; text-align: center">
+        <img style="width: 200px" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
+      </td>
+    </ng-template>
+    <ng-template #smsElse>
+      <td style="width: 300px; text-align: center">
+        <img style="width: 200px" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
+      </td>
+    </ng-template>
+  </tr>
+</table>
+
+
+<div style="font-family: Arial,sans-serif; font-size: 30px; color: black; text-transform: uppercase; margin-left: 35%; margin-top: 50px; color: green">
+  Lấy số điện thoại trang Nanosim
+</div>
+<button class="btn" style="margin-bottom: 20px" (click)="getCodeFromNanoSim()">Lấy mã Nanosim</button>
+
+<table style="border: 1px solid grey" width="100%">
+  <tr>
+    <th>Mã số (Không cầng để ý mã này)</th>
+    <th>Số điện thoại</th>
+    <th>Tin nhắn SMS</th>
+    <th>Thời gian (s) 300s là hết hạn</th>
+  </tr>
+
+  <tr>
+    <td *ngIf="sessionIdNanoSim; else orderIdElse" style="width: 300px; text-align: center; font-size: 20px">{{sessionIdNanoSim}}</td>
+    <td *ngIf="phone; else phoneElse" style="width: 300px; text-align: center; font-size: 20px">{{phone}}</td>
+    <td *ngIf="sms; else smsElse" style="width: 300px; text-align: center; font-size: 20px">{{sms}}</td>
+    <td style="width: 300px; text-align: center; font-size: 20px">{{time2}}</td>
+
+    <ng-template #orderIdElse>
+      <td style="width: 300px; text-align: center">
+        <img style="width: 200px" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
+      </td>
+    </ng-template>
+    <ng-template #phoneElse>
+      <td style="width: 300px; text-align: center">
+        <img style="width: 200px" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
+      </td>
+    </ng-template>
+    <ng-template #smsElse>
+      <td style="width: 300px; text-align: center">
+        <img style="width: 200px" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" />
+      </td>
+    </ng-template>
+  </tr>
+</table>

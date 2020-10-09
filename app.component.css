@@ -1,0 +1,15 @@
+.btn {
+  height: 30px;
+  width: 200px;
+  background: aqua;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #b2ffbd;
+  color: red;
+}
